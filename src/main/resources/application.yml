@@ -3,3 +3,11 @@ server:
 spring:
   main:
     web-application-type: servlet
+  data:
+    mongodb:
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      port: 27017
+      database: thongnguyen
+      host: localhost
