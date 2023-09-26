@@ -8,6 +8,6 @@ spring:
       authentication-database: admin
       username: rootuser
       password: rootpass
-      port: 27017
       database: thongnguyen
+      port: 27018
       host: localhost

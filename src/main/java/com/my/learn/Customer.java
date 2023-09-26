@@ -1,14 +1,26 @@
 package com.my.learn;
 
-import java.util.Objects;
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+
+@Data
+@Document
 public class Customer {
+    @Id
     private Integer id;
     private String name;
     private String email;
     private Integer age;
 
-    public Customer(Integer id,
+    public Customer(String name, String email, Integer age) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
+
+    /*public Customer(Integer id,
                     String name,
                     String email,
                     Integer age) {
@@ -64,5 +76,5 @@ public class Customer {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, email, age);
-    }
+    }*/
 }
