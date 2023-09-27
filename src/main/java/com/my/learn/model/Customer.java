@@ -1,26 +1,28 @@
-package com.my.learn;
+package com.my.learn.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
 
 @Data
-@Document
-public class Customer {
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Customer implements Serializable {
     @Id
-    private Integer id;
+    private String id;
+
     private String name;
     private String email;
     private Integer age;
 
-    public Customer(String name, String email, Integer age) {
-        this.name = name;
-        this.email = email;
-        this.age = age;
-    }
 
-    /*public Customer(Integer id,
+    /*
+    public Customer(Integer id,
                     String name,
                     String email,
                     Integer age) {

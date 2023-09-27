@@ -1,13 +1,13 @@
 server:
   port: 80
 spring:
-  main:
-    web-application-type: servlet
   data:
     mongodb:
+      host: localhost
+      port: 27018
       authentication-database: admin
       username: rootuser
       password: rootpass
       database: thongnguyen
-      port: 27018
-      host: localhost
+  jackson:
+    default-property-inclusion: non_null
